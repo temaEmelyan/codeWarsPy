@@ -1,21 +1,23 @@
 def gap(g, m, n):
-    d = [0 for x in range(n - m + 1)]
-    for i in range(m, n + 1):
-        d[i - m] = is_prime(i)
-
-    current_indx = 0
+    if m % 2 == 0:
+        m += 1
+    current_indx = m
 
     while True:
-        try:
-            while not d[current_indx] & d[current_indx + g]:
-                current_indx += 1
-            try:
-                ind = d.index(True, current_indx + 1, current_indx + g)
-                current_indx = ind
-            except ValueError:
-                return [current_indx + m, current_indx + m + g]
-        except IndexError:
+        had_prime_in_the_gap = False
+        if current_indx > n - g:
             return None
+
+        while not is_prime(current_indx) & is_prime(current_indx + g):
+            current_indx += 2
+
+        for i in range(current_indx + 2, current_indx + g, 2):
+            if is_prime(i):
+                current_indx = current_indx + g
+                had_prime_in_the_gap = True
+                break
+        if not had_prime_in_the_gap:
+            return [current_indx, current_indx + g]
 
 
 def is_prime(n):
