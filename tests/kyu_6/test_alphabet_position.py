@@ -1,6 +1,5 @@
-from random import randint
-
 import unittest
+from random import randint
 
 from kyu_6.ReplaceWithAlphabetPosition import alphabet_position, alphabet_position1
 

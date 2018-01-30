@@ -1,6 +1,5 @@
-from unittest import TestCase
-
 import random
+from unittest import TestCase
 
 from kyu_7.YouAreASquare import is_square
 

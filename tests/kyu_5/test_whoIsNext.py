@@ -12,7 +12,7 @@ class TestWhoIsNext(TestCase):
     def test_whoIsNext01(self):
         self.assertEqual(whoIsNext(TestWhoIsNext.names, 4), TestWhoIsNext.names[3])
 
-    def test_whoIsNext01(self):
+    def test_whoIsNext011(self):
         self.assertEqual(whoIsNext(TestWhoIsNext.names, 5), "Howard")
 
     def test_whoIsNext1(self):
