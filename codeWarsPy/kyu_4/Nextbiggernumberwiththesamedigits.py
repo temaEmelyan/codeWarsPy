@@ -1,5 +1,3 @@
-# todo finish that
-
 def next_bigger(n):
     if n < 12:
         return -1
@@ -30,4 +28,3 @@ def next_bigger(n):
 
 print(next_bigger(543201))
 print(next_bigger(59884848459853))
-# 1234567890 -> 1234567908
